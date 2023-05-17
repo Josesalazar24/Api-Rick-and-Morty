@@ -39,3 +39,21 @@ export function fetchData(url: string) {
 
   return getSuspender(promise);
 }
+
+{
+  /* <Suspense fallback={<div>Loading</div>}>
+        {data?.map((user) => (
+          <VStack key={user}>
+            <VStack>
+              <Text>
+                {user.name} {user.status} {user.gender} {user.species}
+              </Text>
+            </VStack>
+          </VStack>
+        ))}
+      </Suspense> */
+}
+
+// const apiData = fetchData("https://rickandmortyapi.com/api/character/1,183");
+
+// const data = apiData.read();

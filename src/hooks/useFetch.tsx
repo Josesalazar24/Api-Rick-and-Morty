@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { VStack, Text, Image, SimpleGrid } from "@chakra-ui/react";
 
 interface CustomError {
   status: number;
@@ -15,12 +16,7 @@ export function useFetch<T>(url: string): {
   const [error, setError] = useState<CustomError>();
 
   useEffect(() => {
-    fetch(url, {
-      // headers: {
-      //   "X-RapidAPI-Key": "50ea0f1bd6mshce18abfb53b5ec0p157db5jsn05404bf09c72",
-      //   "X-RapidAPI-Host": "free-nba.p.rapidapi.com",
-      // },
-    })
+    fetch(url)
       .then((response) => response.json())
       .then((data) => setData(data))
       .catch((error) => {
